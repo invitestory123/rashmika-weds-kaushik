@@ -58,22 +58,18 @@
       </section>
       <section class="paper-section floral schedule-section" aria-labelledby="schedule-title">
         <h2 class="script reveal" id="schedule-title">Order of Events</h2>
-        <ol class="timeline">
+        <div class="timeline-container">
           ${data.schedule.map(event=>`
-            <li class="reveal">
-              <time class="event-time">
-                <span class="event-date-chip">${text(event.dateShort || event.date || '')}</span>
-                <span class="event-clock">${text(event.time)}</span>
-              </time>
-              <span class="event-marker" aria-hidden="true"></span>
-              <span class="event-name">
-                <strong>${text(event.title)}</strong>
-                ${event.description ? `<p class="event-desc">${text(event.description)}</p>` : ''}
-                ${event.attire ? `<small class="event-attire-hint">${text(event.attire)}</small>` : ''}
-              </span>
-            </li>
+            <article class="timeline-card reveal">
+              <div class="timeline-meta">
+                <span class="timeline-datetime">${text(event.date || '')} <span class="timeline-sep">|</span> ${text(event.time || '')}</span>
+              </div>
+              <h3 class="timeline-title">${text(event.title)}</h3>
+              ${event.description ? `<p class="timeline-desc">${text(event.description)}</p>` : ''}
+              ${event.attire ? `<small class="timeline-attire">${text(event.attire)}</small>` : ''}
+            </article>
           `).join('')}
-        </ol>
+        </div>
         <p class="schedule-note">${text(data.wedding.scheduleNote)}</p>
       </section>
       <section class="paper-section venue-section torn" aria-labelledby="venue-title">

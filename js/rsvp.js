@@ -13,38 +13,37 @@ window.initWeddingRSVP = (form, config, names) => {
       <input id="rsvp-count" name="guestCount" type="number" min="1" max="100" step="1" value="1" disabled aria-describedby="rsvp-count-help">
       <small id="rsvp-count-help">Including yourself</small>
 
-      <label for="rsvp-stay">Are you staying with us on 7th Feb night?</label>
-      <select id="rsvp-stay" name="stay" disabled required>
-        <option value="Yes, staying on 7th Feb night">Yes, staying on 7th Feb night</option>
-        <option value="No, not staying overnight">No, not staying overnight</option>
-      </select>
-
-      <label for="rsvp-kids">Are you attending the celebration with kid(s)?</label>
+      <label for="rsvp-kids">Are you attending the celebrations with your children?</label>
       <select id="rsvp-kids" name="kids" disabled required>
         <option value="No">No</option>
-        <option value="Yes, attending with kid(s)">Yes, attending with kid(s)</option>
+        <option value="Yes, attending with children">Yes, attending with children</option>
       </select>
 
-      <label for="rsvp-meal">Do you prefer veg or non-veg?</label>
+      <label for="rsvp-meal">Do you prefer veg or non veg?</label>
       <select id="rsvp-meal" name="meal" disabled required>
         <option value="Vegetarian">Vegetarian</option>
         <option value="Non-Vegetarian">Non-Vegetarian</option>
       </select>
 
-      <label for="rsvp-allergies">Specify allergies (if any)</label>
-      <input id="rsvp-allergies" name="allergies" type="text" maxlength="150" placeholder="e.g. None, nuts, dairy, gluten..." disabled>
-      <small>Let us know if you have any dietary restrictions</small>
+      <label for="rsvp-allergies">Allergies if any</label>
+      <input id="rsvp-allergies" name="allergies" type="text" maxlength="150" placeholder="None / specify allergies" disabled>
+
+      <label for="rsvp-stay">Are you staying with us on 7th night?</label>
+      <select id="rsvp-stay" name="stay" disabled required>
+        <option value="Yes, staying with you on 7th night">Yes, staying with you on 7th night</option>
+        <option value="No, not staying overnight">No, not staying overnight</option>
+      </select>
     </div>
-    <button type="submit" class="action rsvp-link">Send RSVP via Email</button>
+    <button type="submit" class="action rsvp-link">PREPARE RSVP EMAIL</button>
     <p class="rsvp-help" role="status"></p>`;
 
   const name = form.querySelector('#rsvp-name');
   const attendance = form.querySelector('#rsvp-attendance');
   const count = form.querySelector('#rsvp-count');
-  const stay = form.querySelector('#rsvp-stay');
   const kids = form.querySelector('#rsvp-kids');
   const meal = form.querySelector('#rsvp-meal');
   const allergies = form.querySelector('#rsvp-allergies');
+  const stay = form.querySelector('#rsvp-stay');
   const party = form.querySelector('#rsvp-party');
   const help = form.querySelector('.rsvp-help');
   const email = String(config.email || '').trim();
@@ -53,13 +52,13 @@ window.initWeddingRSVP = (form, config, names) => {
   const sync = () => {
     const attending = attendance.value === 'yes';
     party.hidden = !attending;
-    [count, stay, kids, meal, allergies].forEach(el => {
+    [count, kids, meal, allergies, stay].forEach(el => {
       if (el) el.disabled = !attending;
     });
     count.required = attending;
-    stay.required = attending;
     kids.required = attending;
     meal.required = attending;
+    stay.required = attending;
   };
 
   attendance.addEventListener('change', sync);
@@ -86,10 +85,10 @@ window.initWeddingRSVP = (form, config, names) => {
         `• Guest Name: ${name.value.trim()}\n` +
         `• Attendance: Joyfully accepts\n` +
         `• Number of Guests: ${count.value}\n` +
-        `• Staying on 7th Feb night: ${stay.value}\n` +
-        `• Attending with kid(s): ${kids.value}\n` +
-        `• Food Preference: ${meal.value}\n` +
-        `• Allergies / Dietary Restrictions: ${allergies.value.trim() || 'None'}\n\n` +
+        `• Attending with children: ${kids.value}\n` +
+        `• Food Preference (Veg / Non-veg): ${meal.value}\n` +
+        `• Allergies (if any): ${allergies.value.trim() || 'None'}\n` +
+        `• Staying on 7th night: ${stay.value}\n\n` +
         `Looking forward to celebrating together!\n\n` +
         `With warm wishes,\n` +
         `${name.value.trim()}`;

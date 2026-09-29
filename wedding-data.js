@@ -21,7 +21,7 @@ window.WEDDING_DATA = {
   },
   "schedule": [
     {
-      "date": "7 February 2027",
+      "date": "7 FEBRUARY 2027",
       "dateShort": "7 Feb",
       "time": "1:00 PM",
       "title": "Guest Arrival & Check-In",
@@ -29,7 +29,7 @@ window.WEDDING_DATA = {
       "tag": "Day 1"
     },
     {
-      "date": "7 February 2027",
+      "date": "7 FEBRUARY 2027",
       "dateShort": "7 Feb",
       "time": "1:30 PM",
       "title": "Haldi & Mehendi",
@@ -37,7 +37,7 @@ window.WEDDING_DATA = {
       "tag": "Day 1"
     },
     {
-      "date": "7 February 2027",
+      "date": "7 FEBRUARY 2027",
       "dateShort": "7 Feb",
       "time": "4:00 PM",
       "title": "High Tea",
@@ -45,7 +45,7 @@ window.WEDDING_DATA = {
       "tag": "Day 1"
     },
     {
-      "date": "7 February 2027",
+      "date": "7 FEBRUARY 2027",
       "dateShort": "7 Feb",
       "time": "6:30 PM",
       "title": "Sangeet",
@@ -53,7 +53,7 @@ window.WEDDING_DATA = {
       "tag": "Day 1"
     },
     {
-      "date": "8 February 2027",
+      "date": "8 FEBRUARY 2027",
       "dateShort": "8 Feb",
       "time": "5:45 AM",
       "title": "Muhurtham",
@@ -100,7 +100,7 @@ window.WEDDING_DATA = {
   },
   // Add the host's email address to enable the RSVP button.
   "rsvp": {
-    "email": "kashwedsrash@gmail.com",
+    "email": "invitestory123@gmail.com",
     "heading": "Celebrate With Us",
     "note": "Your presence will make our celebration complete. Please let us know if you will be joining us.",
     "deadline": ""
