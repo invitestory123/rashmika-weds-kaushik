@@ -21,21 +21,43 @@ window.WEDDING_DATA = {
   },
   "schedule": [
     {
-      "title": "Haldi & Mehendi",
+      "date": "7 February 2027",
+      "dateShort": "7 Feb",
+      "time": "1:00 PM",
+      "title": "Guest Arrival & Check-In",
+      "description": "The celebrations begin! Come in, settle in, and get ready for a beautiful few days filled with love, laughter and festivities.",
+      "tag": "Day 1"
+    },
+    {
+      "date": "7 February 2027",
+      "dateShort": "7 Feb",
       "time": "1:30 PM",
-      "attire": "Yellow and white attire",
+      "title": "Haldi & Mehendi",
+      "description": "Let’s kick-start the celebrations! Come prepared for some fun, games, playful haldi, pretty phool and lots of happy vibes.",
       "tag": "Day 1"
     },
     {
-      "title": "Sangeet Night",
+      "date": "7 February 2027",
+      "dateShort": "7 Feb",
+      "time": "4:00 PM",
+      "title": "High Tea",
+      "description": "A little pause, a little indulgence, and plenty of time to sip, savour and soak in the celebrations together.",
+      "tag": "Day 1"
+    },
+    {
+      "date": "7 February 2027",
+      "dateShort": "7 Feb",
       "time": "6:30 PM",
-      "attire": "Indo-Western shimmer, glitz & glam (kindly avoid blues)",
+      "title": "Sangeet",
+      "description": "As the night comes alive beneath the dazzling sky, join us for an evening of music, dance, laughter and unforgettable moments. Dress up, dance away and make some core memories with us!",
       "tag": "Day 1"
     },
     {
-      "title": "Muhurtam",
+      "date": "8 February 2027",
+      "dateShort": "8 Feb",
       "time": "5:45 AM",
-      "attire": "South Indian traditional attire (kindly avoid gold colour outfits)",
+      "title": "Muhurtham",
+      "description": "As two hearts begin a beautiful new chapter and two families come together, we would be honoured to have your blessings and presence as we celebrate this precious moment with you.",
       "tag": "Day 2"
     }
   ],
@@ -74,11 +96,11 @@ window.WEDDING_DATA = {
         "note": "Silk sarees, veshtis & dhotis. Guests are kindly requested to avoid wearing gold colour outfits."
       }
     ],
-    "giftPreference": "Your warm presence and heartfelt blessings are the greatest gifts we could cherish. Kindly, no boxed gifts."
+    "giftPreference": "Your warm presence and heartfelt blessings are the greatest gifts we could cherish."
   },
   // Add the host's email address to enable the RSVP button.
   "rsvp": {
-    "email": "",
+    "email": "kashwedsrash@gmail.com",
     "heading": "Celebrate With Us",
     "note": "Your presence will make our celebration complete. Please let us know if you will be joining us.",
     "deadline": ""

@@ -61,10 +61,14 @@
         <ol class="timeline">
           ${data.schedule.map(event=>`
             <li class="reveal">
-              <time>${text(event.time)}</time>
+              <time class="event-time">
+                <span class="event-date-chip">${text(event.dateShort || event.date || '')}</span>
+                <span class="event-clock">${text(event.time)}</span>
+              </time>
               <span class="event-marker" aria-hidden="true"></span>
               <span class="event-name">
                 <strong>${text(event.title)}</strong>
+                ${event.description ? `<p class="event-desc">${text(event.description)}</p>` : ''}
                 ${event.attire ? `<small class="event-attire-hint">${text(event.attire)}</small>` : ''}
               </span>
             </li>
