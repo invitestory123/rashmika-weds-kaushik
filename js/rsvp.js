@@ -34,7 +34,7 @@ window.initWeddingRSVP = (form, config, names) => {
         <option value="No, not staying overnight">No, not staying overnight</option>
       </select>
     </div>
-    <button type="submit" class="action rsvp-link" id="rsvp-submit-btn">SEND RSVP DIRECTLY</button>
+    <button type="submit" class="action rsvp-link" id="rsvp-submit-btn">PREPARE RSVP EMAIL</button>
     <p class="rsvp-help" role="status"></p>`;
 
   const name = form.querySelector('#rsvp-name');
@@ -45,11 +45,9 @@ window.initWeddingRSVP = (form, config, names) => {
   const allergies = form.querySelector('#rsvp-allergies');
   const stay = form.querySelector('#rsvp-stay');
   const party = form.querySelector('#rsvp-party');
-  const submitBtn = form.querySelector('#rsvp-submit-btn');
   const help = form.querySelector('.rsvp-help');
   const email = String(config.email || '').trim();
   const validEmail = /^[^\s@<>?,;:%]+@[^\s@<>?,;:%]+\.[^\s@<>?,;:%]+$/.test(email);
-  const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
   const sync = () => {
     const attending = attendance.value === 'yes';
@@ -68,15 +66,15 @@ window.initWeddingRSVP = (form, config, names) => {
   sync();
 
   help.innerHTML = validEmail
-    ? `Your RSVP will be sent directly to the hosts at <strong>${email}</strong>.`
-    : 'You’re welcome to fill in your details. Direct RSVP will be available once the host adds their address.';
+    ? `Your email app will open addressed to <strong>${email}</strong>.<br><small style="display:block;margin-top:6px;opacity:.85">Press Send in your email app to submit your response.</small>`
+    : 'You’re welcome to fill in your details. Email RSVP will be available once the host adds their address.';
 
-  form.addEventListener('submit', async event => {
+  form.addEventListener('submit', event => {
     event.preventDefault();
     name.setCustomValidity(name.value.trim() ? '' : 'Please enter your full name.');
     if (!form.reportValidity()) return;
     if (!validEmail) {
-      help.textContent = 'The host’s RSVP email is not configured yet.';
+      help.textContent = 'The host’s RSVP email is not configured yet. Your reply has not been sent.';
       return;
     }
 
@@ -112,59 +110,7 @@ window.initWeddingRSVP = (form, config, names) => {
     }
 
     const subject = `Wedding RSVP — ${guestName} (${attending ? 'Joyfully Accepts' : 'Regretfully Declines'})`;
-
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'SENDING RSVP...';
-    help.textContent = 'Submitting your RSVP directly to the hosts...';
-
-    const payload = {
-      "Guest Name": guestName,
-      "Attendance": attending ? "Joyfully accepts" : "Regretfully declines",
-      "Number of Guests": guestCount,
-      "Attending with Children": childrenPref,
-      "Food Preference": foodPref,
-      "Allergies": dietaryAllergies,
-      "Staying on 7th Night": stayPref,
-      "_subject": subject,
-      "_template": "table",
-      "_captcha": "false"
-    };
-
-    try {
-      const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(email)}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      });
-      const data = await response.json().catch(() => ({}));
-      if (response.ok || data.success === 'true' || data.success === true) {
-        form.innerHTML = `
-          <div class="rsvp-success-card">
-            <div class="rsvp-success-badge" aria-hidden="true">✓</div>
-            <h3 class="rsvp-success-title">Thank You, ${escape(guestName)}!</h3>
-            <p class="rsvp-success-msg">Your RSVP has been sent directly to the hosts at <strong>${escape(email)}</strong>.</p>
-            <p class="rsvp-success-note">${attending ? 'We look forward to celebrating together!' : 'Warmest wishes, thank you for letting us know.'}</p>
-          </div>
-        `;
-        return;
-      }
-      throw new Error(data.message || 'Direct delivery error');
-    } catch (err) {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'SEND RSVP DIRECTLY';
-      help.innerHTML = `
-        <span style="display:block;margin-bottom:8px">Direct delivery was interrupted. You can send it directly via email app below:</span>
-        <button type="button" class="action secondary" id="rsvp-fallback-btn" style="width:100%;margin-top:6px">Send via Email App</button>
-      `;
-      const fallbackBtn = form.querySelector('#rsvp-fallback-btn');
-      if (fallbackBtn) {
-        fallbackBtn.addEventListener('click', () => {
-          window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        });
-      }
-    }
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    help.innerHTML = `Your RSVP email has been prepared for <strong>${email}</strong>.<br><small style="display:block;margin-top:6px;opacity:.9">Please hit <strong>Send</strong> in your email app to complete your response.</small>`;
   });
 };
