@@ -74,7 +74,7 @@
       </section>
       <section class="paper-section venue-section torn" aria-labelledby="venue-title">
         <h2 class="script reveal" id="venue-title">Where we celebrate</h2>
-        <img class="venue-scene reveal" src="${text(safeURL(data.media.photos?.coupleVacation || asset('hero-first.png')))}" alt="Celebration Venue" loading="lazy">
+        <img class="venue-scene reveal" src="${text(safeURL(data.media.photos?.resort || data.venue.image || './assets/evara-resort.jpg'))}" alt="${text(data.venue.name)}" loading="lazy">
         <p class="venue-caption">${text(data.venue.sceneCaption)}</p>
         <div class="location-frame reveal">
           <h3 class="venue-name">${text(data.venue.name)}</h3>
@@ -87,24 +87,7 @@
           </div>
         </div>
         <p class="travel-note">${text(data.venue.note)}</p>
-      </section>
-      <section class="paper-section moments-section torn" aria-label="Our Cherished Moments">
-        <h2 class="script reveal">Cherished Moments</h2>
-        <p class="moments-intro reveal">A glimpse into our beautiful journey together</p>
-        <div class="moments-grid">
-          <figure class="moment-card reveal">
-            <div class="moment-img-wrap">
-              <img src="${text(safeURL(data.media.photos?.coupleGarden || './assets/couple-garden.jpg'))}" alt="Rashmika and Kaushik together" loading="lazy">
-            </div>
-            <figcaption class="moment-caption">Wrapped in love &amp; laughter</figcaption>
-          </figure>
-          <figure class="moment-card reveal">
-            <div class="moment-img-wrap">
-              <img src="${text(safeURL(data.media.photos?.coupleVacation || './assets/couple-vacation.jpg'))}" alt="Rashmika and Kaushik by the beach" loading="lazy">
-            </div>
-            <figcaption class="moment-caption">Walking hand in hand into forever</figcaption>
-          </figure>
-        </div>
+        ${data.venue.stayNote ? `<p class="travel-note stay-note">${text(data.venue.stayNote)}</p>` : ''}
       </section>
       <section class="paper-section floral etiquette" aria-label="Guest details">
         <article class="reveal">
@@ -139,7 +122,7 @@
       </section>
       <footer class="closing" aria-labelledby="closing-title">
         <div class="closing-scene">
-          <img class="closing-art" src="${text(safeURL(data.media.photos?.coupleGarden || data.media.heroPoster || asset('hero-first.png')))}" alt="Rashmika and Kaushik" width="720" height="1280" loading="lazy" decoding="async">
+          <img class="closing-art" src="${text(safeURL(data.media.heroPoster || asset('hero-first.png')))}" alt="${text(data.couple.first)} &amp; ${text(data.couple.second)}" width="720" height="1280" loading="lazy" decoding="async">
           <div class="closing-copy reveal">
             <p class="closing-eyebrow">The beginning of our forever</p>
             <h2 class="closing-title" id="closing-title">With all<br><em>our love</em></h2>

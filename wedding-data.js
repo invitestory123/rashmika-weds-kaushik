@@ -11,10 +11,10 @@ window.WEDDING_DATA = {
     "subtitle": "Two lives, two souls, one heart."
   },
   "wedding": {
-    "dateLabel": "28 · 11 · 2026",
-    "longDate": "Saturday & Sunday, 28–29 November 2026",
-    "dateISO": "2026-11-28T13:30:00+05:30",
-    "endISO": "2026-11-29T12:00:00+05:30",
+    "dateLabel": "07 · 02 · 2027",
+    "longDate": "Sunday & Monday, 7–8 February 2027",
+    "dateISO": "2027-02-07T13:30:00+05:30",
+    "endISO": "2027-02-08T12:00:00+05:30",
     "salutation": "Dear Family & Friends,",
     "invitationNote": "With joyful hearts, we warmly invite you to celebrate the union of Rashmika & Kaushik. Please join us for rituals, celebration, laughter, and lifelong memories as our new chapter begins.",
     "scheduleNote": "All ceremonies will be celebrated at Evara Resort."
@@ -44,8 +44,10 @@ window.WEDDING_DATA = {
     "address": "Thenkarai, Mathampatty, Tamil Nadu 641101",
     "mapsUrl": "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x3ba85d0063bf932f:0xbe24217f08419467?entry=s&sa=X&ved=2ahUKEwisjYfLy4-XAxW00QIHHSDlOn8Q4kB6BAgdEAA&hl=en",
     "timeLabel": "Thenkarai, Mathampatty",
+    "image": "./assets/evara-resort.jpg",
     "sceneCaption": "Evara Resort — surrounded by serene nature and celebration",
-    "note": "Ample parking and guest assistance are available at the resort."
+    "note": "Ample parking and guest assistance are available at the resort.",
+    "stayNote": "Stay is taken care of for all the guests."
   },
   "details": {
     "dressCode": "Please see our event-specific attire guide below.",
@@ -93,8 +95,7 @@ window.WEDDING_DATA = {
     "photos": {
       "bride": "./assets/bride.jpg",
       "groom": "./assets/groom.jpg",
-      "coupleGarden": "./assets/couple-garden.jpg",
-      "coupleVacation": "./assets/couple-vacation.jpg"
+      "resort": "./assets/evara-resort.jpg"
     }
   }
 };
