@@ -11,17 +11,17 @@ window.WEDDING_DATA = {
     "subtitle": "Two lives, two souls, one heart."
   },
   "wedding": {
-    "dateLabel": "07 · 02 · 2027",
-    "longDate": "Sunday & Monday, 7–8 February 2027",
-    "dateISO": "2027-02-07T13:30:00+05:30",
-    "endISO": "2027-02-08T12:00:00+05:30",
+    "dateLabel": "7th and 8th February 2026",
+    "longDate": "Sunday & Monday, 7th and 8th February 2026",
+    "dateISO": "2026-02-07T13:30:00+05:30",
+    "endISO": "2026-02-08T12:00:00+05:30",
     "salutation": "Dear Family & Friends,",
     "invitationNote": "With joyful hearts, we warmly invite you to celebrate the union of Rashmika & Kaushik. Please join us for rituals, celebration, laughter, and lifelong memories as our new chapter begins.",
     "scheduleNote": "All ceremonies will be celebrated at Evara Resort."
   },
   "schedule": [
     {
-      "date": "7 FEBRUARY 2027",
+      "date": "7 FEBRUARY 2026",
       "dateShort": "7 Feb",
       "time": "1:00 PM",
       "title": "Guest Arrival & Check-In",
@@ -29,7 +29,7 @@ window.WEDDING_DATA = {
       "tag": "Day 1"
     },
     {
-      "date": "7 FEBRUARY 2027",
+      "date": "7 FEBRUARY 2026",
       "dateShort": "7 Feb",
       "time": "1:30 PM",
       "title": "Haldi & Mehendi",
@@ -37,7 +37,7 @@ window.WEDDING_DATA = {
       "tag": "Day 1"
     },
     {
-      "date": "7 FEBRUARY 2027",
+      "date": "7 FEBRUARY 2026",
       "dateShort": "7 Feb",
       "time": "4:00 PM",
       "title": "High Tea",
@@ -45,7 +45,7 @@ window.WEDDING_DATA = {
       "tag": "Day 1"
     },
     {
-      "date": "7 FEBRUARY 2027",
+      "date": "7 FEBRUARY 2026",
       "dateShort": "7 Feb",
       "time": "6:30 PM",
       "title": "Sangeet",
@@ -53,7 +53,7 @@ window.WEDDING_DATA = {
       "tag": "Day 1"
     },
     {
-      "date": "8 FEBRUARY 2027",
+      "date": "8 FEBRUARY 2026",
       "dateShort": "8 Feb",
       "time": "5:45 AM",
       "title": "Muhurtham",
