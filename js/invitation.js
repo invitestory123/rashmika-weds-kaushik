@@ -223,10 +223,20 @@
 
   function tick(){
     if(!validDate){$('countdown').hidden=true;$('countdown-note').textContent=data.wedding.longDate;return;}
-    const remaining=Math.max(0,date.getTime()-Date.now()), seconds=Math.floor(remaining/1000);
+    let target = date.getTime();
+    if(target <= Date.now()){
+      const upcoming = new Date(date);
+      while(upcoming.getTime() <= Date.now()){
+        upcoming.setFullYear(upcoming.getFullYear() + 1);
+      }
+      target = upcoming.getTime();
+    }
+    const remaining=Math.max(0,target-Date.now()), seconds=Math.floor(remaining/1000);
     const values={days:Math.floor(seconds/86400),hours:Math.floor(seconds/3600)%24,minutes:Math.floor(seconds/60)%60,seconds:seconds%60};
-    for(const [key,value] of Object.entries(values)) document.querySelector(`[data-count="${key}"]`).textContent=String(value).padStart(2,'0');
-    if(!remaining){$('countdown-title').textContent='Our celebration has begun';$('countdown-note').textContent='Thank you for being part of our story.';}
+    for(const [key,value] of Object.entries(values)){
+      const el = document.querySelector(`[data-count="${key}"]`);
+      if(el) el.textContent=String(value).padStart(2,'0');
+    }
   }
   tick();setInterval(tick,1000);
   const icsEscape=value=>String(value).replace(/\\/g,'\\\\').replace(/\r?\n/g,'\\n').replace(/,/g,'\\,').replace(/;/g,'\\;');
