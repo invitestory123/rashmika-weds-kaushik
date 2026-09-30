@@ -74,6 +74,7 @@
         </div>
         <div class="schedule-notes-wrap">
           <p class="schedule-note">${text(data.wedding.scheduleNote)}</p>
+          ${data.wedding.checkoutNote ? `<p class="schedule-note schedule-checkout">${text(data.wedding.checkoutNote)}</p>` : ''}
           ${data.wedding.intimateNote ? `<p class="intimate-note">${text(data.wedding.intimateNote)}</p>` : ''}
         </div>
       </section>

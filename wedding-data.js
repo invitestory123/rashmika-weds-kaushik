@@ -18,6 +18,7 @@ window.WEDDING_DATA = {
     "salutation": "Dear Family & Friends,",
     "invitationNote": "With joyful hearts, we warmly invite you to celebrate the union of Rashmika & Kaushik. Please join us for rituals, celebration, laughter, and lifelong memories as our new chapter begins.",
     "scheduleNote": "All ceremonies will be celebrated at Evara Resort.",
+    "checkoutNote": "Guest check out at 10:00 AM from the resort.",
     "intimateNote": "As we celebrate our big day, we’d love to keep this celebration intimate and special. Kindly request you to keep this invitation personal and not share it with anyone else."
   },
   "schedule": [

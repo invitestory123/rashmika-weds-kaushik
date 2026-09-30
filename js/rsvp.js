@@ -12,6 +12,7 @@ window.initWeddingRSVP = (form, config, names) => {
         <option value="">Please select your response</option>
         <option value="yes">Joyfully accepts</option>
         <option value="no">Regretfully declines</option>
+        <option value="unsure">Not sure of attending yet</option>
       </select>
       <div id="rsvp-party" hidden>
         <label for="rsvp-count">Number of guests attending</label>
@@ -81,7 +82,9 @@ window.initWeddingRSVP = (form, config, names) => {
         return;
       }
 
-      const attending = attendance.value === 'yes';
+      const attendanceVal = attendance.value;
+      const attending = attendanceVal === 'yes';
+      const unsure = attendanceVal === 'unsure';
       const guestName = name.value.trim();
       const guestCount = attending ? count.value : '0';
       const childrenPref = attending ? kids.value : 'N/A';
@@ -89,15 +92,23 @@ window.initWeddingRSVP = (form, config, names) => {
       const dietaryAllergies = attending ? (allergies.value.trim() || 'None') : 'N/A';
       const stayPref = attending ? stay.value : 'N/A';
 
+      const attendanceStatus = attending
+        ? 'Joyfully accepts'
+        : (unsure ? 'Not sure of attending yet' : 'Regretfully declines');
+
+      const messageLead = attending
+        ? 'Thank you for your kind invitation! We are delighted to celebrate with you.'
+        : (unsure
+          ? 'Thank you for your kind invitation! I am not sure of attending yet, but will keep you updated once my plans are confirmed.'
+          : 'Thank you for your kind invitation. Regretfully, I will be unable to attend, but sending you both my heartfelt congratulations and warmest blessings.');
+
       const lines = [
         `Dear ${names},`,
         '',
-        attending
-          ? 'Thank you for your kind invitation! We are delighted to celebrate with you.'
-          : 'Thank you for your kind invitation. Regretfully, I will be unable to attend, but sending you both my heartfelt congratulations and warmest blessings.',
+        messageLead,
         '',
         `- Guest Name: ${guestName}`,
-        `- Attendance: ${attending ? 'Joyfully accepts' : 'Regretfully declines'}`,
+        `- Attendance: ${attendanceStatus}`,
         ...(attending ? [
           `- Number of Guests: ${guestCount}`,
           `- Attending with children: ${childrenPref}`,
@@ -106,13 +117,13 @@ window.initWeddingRSVP = (form, config, names) => {
           `- Staying on 7th night: ${stayPref}`
         ] : []),
         '',
-        attending ? 'Looking forward to celebrating together!' : '',
+        attending ? 'Looking forward to celebrating together!' : (unsure ? 'Warmest wishes and congratulations!' : ''),
         '',
         'With warm wishes,',
         guestName
       ];
       const bodyText = lines.join('\r\n');
-      const subject = `Wedding RSVP — ${guestName} (${attending ? 'Joyfully Accepts' : 'Regretfully Declines'})`;
+      const subject = `Wedding RSVP — ${guestName} (${attendanceStatus})`;
 
       const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
       const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;

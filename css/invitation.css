@@ -125,8 +125,9 @@ body{font-size:20px;line-height:1.65}.names{font-size:clamp(64px,15vw,88px);line
 @media(max-width:360px){.hero .names{font-size:76px}}
 
 /* Hero supporting copy sits directly on the illustrated stationery. */
-.hero-copy .hero-note{margin:22px auto 0;max-width:240px;font-size:16px;line-height:1.5;text-shadow:0 1px 8px var(--paper),0 0 16px var(--paper)}
-.hero-copy .hero-link{margin-top:16px;font-size:11px;letter-spacing:.12em;text-shadow:0 1px 8px var(--paper)}
+.hero-copy .hero-note{display:inline-block;margin:20px auto 0;max-width:280px;font-family:"Cormorant Garamond",Georgia,serif;font-size:17.5px;font-style:italic;font-weight:600;line-height:1.35;color:var(--ink);background:color-mix(in srgb,var(--paper) 92%,white);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:6px 20px;border-radius:30px;border:1px solid color-mix(in srgb,var(--metal) 45%,transparent);box-shadow:0 4px 18px rgba(0,0,0,0.12)}
+.hero-copy .hero-link{display:inline-flex;align-items:center;justify-content:center;margin-top:14px;padding:10px 24px;background:var(--accent);color:#ffffff!important;font-family:"Montserrat",sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;border-radius:30px;border:1px solid color-mix(in srgb,#ffffff 30%,transparent);box-shadow:0 6px 20px color-mix(in srgb,var(--accent) 45%,transparent),0 2px 8px rgba(0,0,0,0.12);transition:transform .2s ease,box-shadow .2s ease}
+.hero-copy .hero-link:hover{transform:translateY(-1px);box-shadow:0 8px 26px color-mix(in srgb,var(--accent) 60%,transparent)}
 
 /* Couple Spotlight Section */
 .couple-section{padding:55px 22px 65px;background:color-mix(in srgb,var(--paper) 92%,white);position:relative}
@@ -150,7 +151,8 @@ body{font-size:20px;line-height:1.65}.names{font-size:clamp(64px,15vw,88px);line
 .timeline-desc{font:italic 15.5px/1.55 "Cormorant Garamond",Georgia,serif;margin:0;color:var(--ink);opacity:.92}
 .timeline-attire{display:block;font-size:12.5px;letter-spacing:.06em;color:var(--accent);margin-top:8px;font-style:italic}
 .schedule-notes-wrap{margin:36px auto 0;max-width:440px;padding:0 16px}
-.schedule-notes-wrap .schedule-note{font:600 17px/1.45 "Cormorant Garamond",Georgia,serif;color:var(--accent);margin:0 auto 10px;max-width:340px}
+.schedule-notes-wrap .schedule-note{font:600 17px/1.45 "Cormorant Garamond",Georgia,serif;color:var(--accent);margin:0 auto 8px;max-width:340px}
+.schedule-notes-wrap .schedule-checkout{font:600 17px/1.45 "Cormorant Garamond",Georgia,serif;color:var(--accent);margin:0 auto 12px;max-width:340px}
 .intimate-note{font:italic 15px/1.6 "Cormorant Garamond",Georgia,serif;color:var(--ink);opacity:.92;margin:0 auto;max-width:380px}
 
 /* Guest Attire Grid */
