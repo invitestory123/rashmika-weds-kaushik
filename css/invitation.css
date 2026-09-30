@@ -83,21 +83,21 @@ body{font-size:20px;line-height:1.65}.names{font-size:clamp(64px,15vw,88px);line
 /* Closing stationery shares the hero artwork and the invitation paper palette. */
 .closing{padding:0;background:var(--paper);color:var(--ink);text-align:center;isolation:isolate}
 .closing{--closing-ground:var(--paper);--closing-line:var(--accent)}
-.closing-scene{position:relative;isolation:isolate;min-height:850px;padding:95px 40px 235px;display:flex;flex-direction:column;align-items:center;overflow:hidden}
+.closing-scene{position:relative;isolation:isolate;min-height:850px;padding:95px 28px 235px;display:flex;flex-direction:column;align-items:center;overflow:hidden}
 .closing-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;z-index:-2}
-.closing-scene:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--paper) 0%,color-mix(in srgb,var(--paper) 80%,transparent) 10%,color-mix(in srgb,var(--paper) 25%,transparent) 28%,transparent 65%,var(--paper) 100%);pointer-events:none}
-.closing-copy{width:100%;max-width:350px;text-shadow:none}
+.closing-scene:after{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 72% 56% at 50% 50%,color-mix(in srgb,var(--paper) 86%,transparent) 0%,color-mix(in srgb,var(--paper) 48%,transparent) 58%,transparent 100%),linear-gradient(180deg,var(--paper) 0%,color-mix(in srgb,var(--paper) 80%,transparent) 10%,color-mix(in srgb,var(--paper) 25%,transparent) 28%,transparent 65%,var(--paper) 100%);pointer-events:none}
+.closing-copy{width:100%;max-width:280px;text-shadow:0 1px 12px color-mix(in srgb,var(--paper) 95%,white),0 0 24px var(--paper)}
 .closing p{letter-spacing:normal}
 .closing .closing-eyebrow{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin:0 0 27px;color:var(--ink)}
-.closing-title{font:400 clamp(48px,12vw,66px)/1.04 "Cormorant Garamond",Georgia,serif;margin:0;letter-spacing:-.035em}
+.closing-title{font:400 clamp(44px,11vw,62px)/1.04 "Cormorant Garamond",Georgia,serif;margin:0;letter-spacing:-.035em}
 .closing-title em{display:inline-block;font:400 1.12em/1.3 Parisienne,cursive;letter-spacing:0;padding:0 .12em .08em}
 .closing-rule{width:45px;height:1px;background:var(--closing-line);margin:17px auto 24px;opacity:.8}
-.closing .closing-names{font:400 clamp(50px,13vw,68px)/1.08 "Imperial Script",Parisienne,cursive;margin:0 auto 14px;text-align:center}
+.closing .closing-names{font:400 clamp(48px,12vw,64px)/1.08 "Imperial Script",Parisienne,cursive;margin:0 auto 14px;text-align:center}
 .closing-names span{display:block;white-space:nowrap}
 .closing-names i{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:25px;line-height:1.2;margin:4px 0}
-.closing .closing-date{font-size:13px;letter-spacing:.18em;margin:0;text-transform:uppercase}
-.closing .closing-note{font-size:18px;line-height:1.5;margin:26px 0 23px}
-.closing-rsvp{display:inline-flex;align-items:center;gap:18px;min-height:46px;padding:10px 20px;border:1px solid var(--closing-line);border-radius:30px;background:color-mix(in srgb,var(--closing-ground) 80%,transparent);color:var(--ink);text-decoration:none;font-size:14px;transition:background .25s,transform .25s}
+.closing .closing-date{font:700 15px/1.2 "Cormorant Garamond",Georgia,serif;letter-spacing:.12em;margin:0;text-transform:uppercase;color:var(--accent)}
+.closing .closing-note{font-size:16.5px;line-height:1.55;margin:22px auto 22px;max-width:260px}
+.closing-rsvp{display:inline-flex;align-items:center;gap:18px;min-height:46px;padding:10px 20px;border:1px solid var(--closing-line);border-radius:30px;background:color-mix(in srgb,var(--closing-ground) 85%,white);color:var(--ink);text-decoration:none;font-size:14px;font-weight:600;transition:background .25s,transform .25s;box-shadow:0 3px 12px #0000000a}
 .closing-rsvp:hover{background:var(--closing-ground);transform:translateY(-2px)}
 .closing-rsvp:active{transform:translateY(0)}
 .closing .closing-caption{position:absolute;bottom:26px;left:25px;right:25px;margin:0;font-size:13px;font-style:italic;text-shadow:none}
@@ -141,18 +141,23 @@ body{font-size:20px;line-height:1.65}.names{font-size:clamp(64px,15vw,88px);line
 .timeline-container{display:flex;flex-direction:column;gap:18px;max-width:440px;margin:28px auto 0;position:relative}
 .timeline-card{position:relative;background:color-mix(in srgb,var(--paper) 86%,white);border:1px solid color-mix(in srgb,var(--metal) 35%,transparent);outline:1px solid color-mix(in srgb,var(--metal) 20%,transparent);outline-offset:3px;border-radius:12px;padding:24px 22px;text-align:center;box-shadow:0 6px 20px #241b250a;transition:transform .25s ease,box-shadow .25s ease}
 .timeline-card:hover{transform:translateY(-2px);box-shadow:0 10px 26px #241b2512}
-.timeline-meta{display:inline-flex;align-items:center;justify-content:center;margin-bottom:10px}
-.timeline-datetime{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:8px}
-.timeline-sep{opacity:.5;font-weight:300}
+.timeline-meta{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px;padding:5px 16px;background:color-mix(in srgb,var(--paper) 92%,white);border-radius:24px;border:1px solid color-mix(in srgb,var(--metal) 35%,transparent);box-shadow:0 2px 8px #00000006}
+.timeline-date{font:700 15px/1.2 "Cormorant Garamond",Georgia,serif;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.timeline-sep{font-size:14px;color:var(--metal);opacity:.75}
+.timeline-time{font:700 19px/1.2 "Cormorant Garamond",Georgia,serif;color:var(--ink);letter-spacing:.02em}
+.timeline-datetime{display:inline-flex;align-items:center;gap:10px;font:700 15px/1.2 "Cormorant Garamond",Georgia,serif;color:var(--accent)}
 .timeline-title{font:600 23px/1.25 "Cormorant Garamond",Georgia,serif;margin:0 0 10px;color:var(--ink);letter-spacing:.02em}
 .timeline-desc{font:italic 15.5px/1.55 "Cormorant Garamond",Georgia,serif;margin:0;color:var(--ink);opacity:.92}
 .timeline-attire{display:block;font-size:12.5px;letter-spacing:.06em;color:var(--accent);margin-top:8px;font-style:italic}
+.schedule-notes-wrap{margin:36px auto 0;max-width:440px;padding:0 16px}
+.schedule-notes-wrap .schedule-note{font:600 17px/1.45 "Cormorant Garamond",Georgia,serif;color:var(--accent);margin:0 auto 10px;max-width:340px}
+.intimate-note{font:italic 15px/1.6 "Cormorant Garamond",Georgia,serif;color:var(--ink);opacity:.92;margin:0 auto;max-width:380px}
 
 /* Guest Attire Grid */
 .attire-grid{display:flex;flex-direction:column;gap:16px;max-width:380px;margin:24px auto 0;text-align:left}
 .attire-box{padding:18px 20px;background:color-mix(in srgb,var(--paper) 85%,white);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:10px;box-shadow:0 4px 14px #00000008}
 .attire-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .attire-event-name{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent)}
-.attire-event-time{font-size:12px;color:var(--ink);opacity:.75;font-variant-numeric:tabular-nums}
+.attire-event-time{font:700 16px/1.2 "Cormorant Garamond",Georgia,serif;color:var(--accent);letter-spacing:.02em;font-variant-numeric:tabular-nums}
 .attire-theme-name{font:600 18px/1.3 "Cormorant Garamond",Georgia,serif;margin:0 0 6px;color:var(--ink)}
 .attire-detail{font-size:14px;line-height:1.5;margin:0;color:var(--ink);opacity:.9}

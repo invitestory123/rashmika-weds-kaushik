@@ -17,7 +17,8 @@ window.WEDDING_DATA = {
     "endISO": "2027-02-08T12:00:00+05:30",
     "salutation": "Dear Family & Friends,",
     "invitationNote": "With joyful hearts, we warmly invite you to celebrate the union of Rashmika & Kaushik. Please join us for rituals, celebration, laughter, and lifelong memories as our new chapter begins.",
-    "scheduleNote": "All ceremonies will be celebrated at Evara Resort."
+    "scheduleNote": "All ceremonies will be celebrated at Evara Resort.",
+    "intimateNote": "As we celebrate our big day, we’d love to keep this celebration intimate and special. Kindly request you to keep this invitation personal and not share it with anyone else."
   },
   "schedule": [
     {
@@ -25,7 +26,7 @@ window.WEDDING_DATA = {
       "dateShort": "7 Feb",
       "time": "1:00 PM",
       "title": "Guest Arrival & Check-In",
-      "description": "The celebrations begin! Come in, settle in, and get ready for a beautiful few days filled with love, laughter and festivities.",
+      "description": "The celebrations begin! Come in, settle in, and get ready for a beautiful two days filled with love, laughter and festivities.",
       "tag": "Day 1"
     },
     {
@@ -33,7 +34,7 @@ window.WEDDING_DATA = {
       "dateShort": "7 Feb",
       "time": "1:30 PM",
       "title": "Haldi & Mehendi",
-      "description": "Let’s kick-start the celebrations! Come prepared for some fun, games, playful haldi, pretty phool and lots of happy vibes.",
+      "description": "Let’s kick-start the celebrations! Come prepared for some fun, games, playful haldi, vibrant hues and lots of happy vibes.",
       "tag": "Day 1"
     },
     {
@@ -77,9 +78,9 @@ window.WEDDING_DATA = {
       {
         "event": "Haldi & Mehendi",
         "time": "1:30 PM",
-        "theme": "Yellow & White",
-        "palette": ["#f4d03f", "#ffffff"],
-        "note": "Bright, radiant shades of yellow and pristine white."
+        "theme": "Shades of Yellow",
+        "palette": ["#f4d03f", "#f39c12", "#f9e79f"],
+        "note": "Bright, radiant shades of yellow."
       },
       {
         "event": "Sangeet Night",

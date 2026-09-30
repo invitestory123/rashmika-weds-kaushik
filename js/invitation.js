@@ -62,7 +62,9 @@
           ${data.schedule.map(event=>`
             <article class="timeline-card reveal">
               <div class="timeline-meta">
-                <span class="timeline-datetime">${text(event.date || '')} <span class="timeline-sep">|</span> ${text(event.time || '')}</span>
+                <span class="timeline-date">${text(event.date || '')}</span>
+                <span class="timeline-sep" aria-hidden="true">•</span>
+                <span class="timeline-time">${text(event.time || '')}</span>
               </div>
               <h3 class="timeline-title">${text(event.title)}</h3>
               ${event.description ? `<p class="timeline-desc">${text(event.description)}</p>` : ''}
@@ -70,7 +72,10 @@
             </article>
           `).join('')}
         </div>
-        <p class="schedule-note">${text(data.wedding.scheduleNote)}</p>
+        <div class="schedule-notes-wrap">
+          <p class="schedule-note">${text(data.wedding.scheduleNote)}</p>
+          ${data.wedding.intimateNote ? `<p class="intimate-note">${text(data.wedding.intimateNote)}</p>` : ''}
+        </div>
       </section>
       <section class="paper-section venue-section torn" aria-labelledby="venue-title">
         <h2 class="script reveal" id="venue-title">Where we celebrate</h2>
