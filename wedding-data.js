@@ -90,7 +90,7 @@ window.WEDDING_DATA = {
         "note": "Sparkle and shine in dazzling attire. Guests are kindly requested to avoid blues."
       },
       {
-        "event": "Muhurtam (Wedding)",
+        "event": "Muhurtham (Wedding)",
         "time": "5:45 AM",
         "theme": "South Indian Traditional Attire",
         "palette": ["#900c3f", "#581845", "#c70039"],
