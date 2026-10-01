@@ -113,9 +113,9 @@ window.WEDDING_DATA = {
     "heroVideo": "./media/hero.mp4",
     "heroPoster": "./media/hero-poster.jpg",
     "music": "./media/music.mp3",
-    "musicTitle": "Unakaga (Bigil)",
-    "musicArtist": "A. R. Rahman, Sreekanth Hariharan, Madhura Dhara Talluri",
-    "musicSource": "https://youtu.be/gYZjp0RNewc?si=5tbl1cX91y_R5uFR",
+    "musicTitle": "Pesamale",
+    "musicArtist": "Siri Xander & Arra Aria Khayal",
+    "musicSource": "https://open.spotify.com/track/2lo95sXI2RkrXLOYTXpZwe?si=9_qwaj3TQXG5rno-2wBqkw&utm_source=copy-link",
     "photos": {
       "bride": "./assets/bride.jpg",
       "groom": "./assets/groom.jpg",

@@ -145,7 +145,7 @@
         <div class="closing-colophon">
           <button class="reopen" id="reopen">Open the envelope again <span aria-hidden="true">↺</span></button>
           <a class="dearly-signature" href="#" aria-label="InviteStory wedding invitations">InviteStory<small>Made with love for Rashmika &amp; Kaushik</small></a>
-          ${data.media.music && data.media.musicTitle ? `<p class="music-credit">Soundtrack: <a href="${text(safeURL(data.media.musicSource))}" target="_blank" rel="noopener noreferrer">${text(data.media.musicTitle)}</a><br>${text(data.media.musicArtist || 'A. R. Rahman')}<br><small>Playing from 1:20</small></p>` : ''}
+          ${data.media.music && data.media.musicTitle ? `<p class="music-credit">Soundtrack: <a href="${text(safeURL(data.media.musicSource))}" target="_blank" rel="noopener noreferrer">${text(data.media.musicTitle)}</a><br>${text(data.media.musicArtist || 'Siri Xander & Arra Aria Khayal')}<br><small>Volume adjusted · soft fade-in from 0:11</small></p>` : ''}
         </div>
       </footer>
     </main>
