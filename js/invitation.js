@@ -26,9 +26,11 @@
       <section class="hero" aria-label="Wedding invitation">
         <img class="hero-art" src="${data.media.heroPoster ? text(safeURL(data.media.heroPoster)) : asset('hero-first.png')}" alt="${text(theme.scene)}" decoding="async">
         <video class="hero-video" id="hero-video" muted loop playsinline preload="none" hidden></video>
-        <div class="hero-copy"><p class="occasion">The wedding of</p><p class="date">${text(data.wedding.dateLabel)}</p>
+        <div class="hero-copy"><p class="occasion">The wedding of</p>
           <h1 class="names" id="names" tabindex="-1"><span>${text(data.couple.first)}</span><i>&amp;</i><span>${text(data.couple.second)}</span></h1>
+          <p class="date">${text(data.wedding.dateLabel)}</p>
           <p class="hero-note">${text(data.couple.heroNote)}</p><a class="hero-link" href="#our-invitation">With love, you are invited</a>
+          <a class="hero-scroll-hint" href="#our-invitation" aria-label="Scroll down for details"><span>Scroll down for details</span><span class="scroll-arrow" aria-hidden="true">↓</span></a>
         </div>
       </section>
       <section class="paper-section floral intro" id="our-invitation" aria-label="Our invitation">
@@ -143,7 +145,7 @@
         <div class="closing-colophon">
           <button class="reopen" id="reopen">Open the envelope again <span aria-hidden="true">↺</span></button>
           <a class="dearly-signature" href="#" aria-label="InviteStory wedding invitations">InviteStory<small>Made with love for Rashmika &amp; Kaushik</small></a>
-          ${data.media.music && data.media.musicTitle ? `<p class="music-credit">Soundtrack: <a href="${text(safeURL(data.media.musicSource))}" target="_blank" rel="noopener noreferrer">${text(data.media.musicTitle)}</a><br>${text(data.media.musicArtist || 'Siri Xander & Arra Aria Khayal')}<br><small>Volume adjusted · soft fade-in from 0:11</small></p>` : ''}
+          ${data.media.music && data.media.musicTitle ? `<p class="music-credit">Soundtrack: <a href="${text(safeURL(data.media.musicSource))}" target="_blank" rel="noopener noreferrer">${text(data.media.musicTitle)}</a><br>${text(data.media.musicArtist || 'A. R. Rahman')}<br><small>Playing from 1:20</small></p>` : ''}
         </div>
       </footer>
     </main>
