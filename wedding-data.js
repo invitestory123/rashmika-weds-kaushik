@@ -88,7 +88,7 @@ window.WEDDING_DATA = {
         "time": "6:30 PM",
         "theme": "Indo-Western Shimmer, Glitz & Glam",
         "palette": ["#d4af37", "#996515", "#e5e4e2"],
-        "note": "Sparkle and shine in dazzling attire. Guests are kindly requested to avoid blues."
+        "note": "Sparkle and shine in dazzling attire. Guests are kindly requested to avoid wearing outfits in shades of blue and gold."
       },
       {
         "event": "Muhurtham (Wedding)",
