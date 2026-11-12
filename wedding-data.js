@@ -13,7 +13,7 @@ window.WEDDING_DATA = {
   "wedding": {
     "dateLabel": "7th February, 2027 – 8th February, 2027",
     "longDate": "Sunday & Monday, 7th and 8th February 2027",
-    "dateISO": "2027-02-07T13:30:00+05:30",
+    "dateISO": "2027-02-07T11:00:00+05:30",
     "endISO": "2027-02-08T12:00:00+05:30",
     "salutation": "Dear Family & Friends,",
     "invitationNote": "With joyful hearts, we warmly invite you to celebrate the union of Rashmika & Kaushik. Please join us for rituals, celebration, laughter, and lifelong memories as our new chapter begins.",
@@ -25,7 +25,7 @@ window.WEDDING_DATA = {
     {
       "date": "7 FEBRUARY 2027",
       "dateShort": "7 Feb",
-      "time": "1:00 PM",
+      "time": "10:30 AM",
       "title": "Guest Arrival & Check-In",
       "description": "The celebrations begin! Come in, settle in, and get ready for a beautiful two days filled with love, laughter and festivities.",
       "tag": "Day 1"
@@ -33,9 +33,17 @@ window.WEDDING_DATA = {
     {
       "date": "7 FEBRUARY 2027",
       "dateShort": "7 Feb",
-      "time": "1:30 PM",
+      "time": "11:00 AM",
       "title": "Haldi & Mehendi",
       "description": "Let’s kick-start the celebrations! Come prepared for some fun, games, playful haldi, vibrant hues and lots of happy vibes.",
+      "tag": "Day 1"
+    },
+    {
+      "date": "7 FEBRUARY 2027",
+      "dateShort": "7 Feb",
+      "time": "1:00 PM Onwards",
+      "title": "Lunch",
+      "description": "Savour a delicious spread together with family and friends as the celebrations continue.",
       "tag": "Day 1"
     },
     {
@@ -78,7 +86,7 @@ window.WEDDING_DATA = {
     "dressThemes": [
       {
         "event": "Haldi & Mehendi",
-        "time": "1:30 PM",
+        "time": "11:00 AM",
         "theme": "Shades of Yellow",
         "palette": ["#f4d03f", "#f39c12", "#f9e79f"],
         "note": "Bright, radiant shades of yellow."
